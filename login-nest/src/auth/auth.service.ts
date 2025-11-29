@@ -3,9 +3,9 @@ import { UserService } from '../user/user.service';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { LoginDto } from '../dto/login.dto';
-import { AccessToken } from 'src/Entity/access-token.entity';
+import { AccessToken } from 'src/entity/access-token.entity';
 import { InjectRepository } from '@nestjs/typeorm';
-import { RefreshToken } from 'src/Entity/refresh-token.entity';
+import { RefreshToken } from 'src/entity/refresh-token.entity';
 import { Repository } from 'typeorm';
 import { RegisterDto } from 'src/dto/register.dto';
 

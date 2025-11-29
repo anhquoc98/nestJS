@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { User } from 'src/Entity/user.entity';
+import { User } from 'src/entity/user.entity';
 import { Repository } from 'typeorm';
-import { RefreshToken } from '../Entity/refresh-token.entity';
-import { AccessToken } from '../Entity/access-token.entity';
+import { RefreshToken } from '../entity/refresh-token.entity';
+import { AccessToken } from '../entity/access-token.entity';
 
 @Injectable()
 export class UserService {

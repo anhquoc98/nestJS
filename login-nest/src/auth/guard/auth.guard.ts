@@ -9,7 +9,7 @@ import { jwtConstants } from '../constants';
 import { Request } from 'express';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { RefreshToken } from 'src/Entity/refresh-token.entity';
+import { RefreshToken } from 'src/entity/refresh-token.entity';
 
 @Injectable()
 export class AuthGuard implements CanActivate {

@@ -5,8 +5,8 @@ import { AuthController } from './auth.controller';
 import { jwtConstants } from './constants';
 import { UserModule } from '../user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AccessToken } from 'src/Entity/access-token.entity';
-import { RefreshToken } from 'src/Entity/refresh-token.entity';
+import { AccessToken } from 'src/entity/access-token.entity';
+import { RefreshToken } from 'src/entity/refresh-token.entity';
 @Module({
   imports: [
     UserModule,
