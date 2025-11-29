@@ -1,17 +1,25 @@
 version: '3.8'
 
 services:
-  mysql:
-    image: mysql:8.0
-    container_name: nest-auth-mysql
+  app:
+    build: .
     ports:
-      - '3307:3306'
+      - "3000:3000"
     environment:
-      MYSQL_ROOT_PASSWORD: 123456789
-      MYSQL_DATABASE: nest
-    volumes:
-      - mysql_data:/var/lib/mysql
-    command: --default-authentication-plugin=mysql_native_password
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=admin
+      - DB_PASS=password
+      - DB_NAME=mydatabase
+    depends_on:
+      - db
 
-volumes:
-  mysql_data:
+  db:
+    image: postgres:13  # Có thể thay đổi thành MySQL hoặc bất kỳ image DB nào bạn muốn
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
